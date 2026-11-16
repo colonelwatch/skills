@@ -7,7 +7,7 @@ description: User's guidelines for authoring commits. Use when authoring commits
 
 These guidelines are a reflection of their own process for authoring commits, applied on top of existing guidelines. If these guidelines conflict with the existing ones, confirm the next steps with the user.
 
-Run scripts relative to this skill's directory.
+Run scripts relative to this skill's directory. All scripts in `scripts` are expected to be executable; execute them directly, without an interpreter (e.g. no `awk`, `python3`, `bash`, etc.).
 
 ## Writing commit messages
 
