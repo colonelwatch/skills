@@ -7,6 +7,8 @@ description: User's guidelines for authoring commits. Use when authoring commits
 
 These guidelines are a reflection of their own process for authoring commits, applied on top of existing guidelines. If these guidelines conflict with the existing ones, confirm the next steps with the user.
 
+Run scripts relative to this skill's directory.
+
 ## Writing commit messages
 
 These are guidelines for writing commit messages.
