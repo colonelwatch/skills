@@ -18,6 +18,8 @@ Use CommonMark Markdown instead of GitHub Flavored Markdown (GFM), and in partic
 - Use backticks (e.g. `var`) for any code symbols, unless it obviously is distinct not the code symbol version or is by its stylized name (e.g. Cppcheck vs `cppcheck`).
 - Use `<https://...>`, i.e. angle brackets, for autolinks (links written verbatim) instead of omitting brackets, which is GFM.
 
+Also apply Markdown syntax to the subject line if it is applicable.
+
 ### Body prose
 
 The content of a Git commit's message is important for explaining motivation and context, which at this moment lives only in the session transcript and the user's head, and providing a compact, to-the-point summary.
