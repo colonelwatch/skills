@@ -35,6 +35,8 @@ The content of a Git commit's message is important for explaining motivation and
 
 For readability, the first line (the subject line) _should_ be 50 characters long, the second line _must_ be empty, and the following lines (the body) _should_ be 72 characters long. An example of something that will exceed 72 characters in the body is a long link.
 
-Use `scripts/verify_length.awk [-v subject=SUBJECT] [-v body=BODY]` as the verifier: it prints potential offenders as `<NL>\t<NC>\t<LINE>`.
+Use `scripts/verify_length.awk [-v subject=SUBJECT] [-v body=BODY]` as the _authoritative_ verifier: it prints potential offenders as `<NL>\t<NC>\t<LINE>`. All other length checks, including agent-authored ones, are to be treated as purely informational.
 
-When the text is verified, use `fmt -w 72 FILE...` (where `FILE` is the file to read, or `-` to read from standard input) as an aide that finds further word wrap, i.e. moving a word to the previous line if it fits. Do run `fmt` immediately before committing, but sanity-check its output.
+When the text is verified with `scripts/verify_length.awk`, use `fmt -w 72 FILE...` (where `FILE` is the file to read, or `-` to read from standard input) as an aide that finds further word wrap, i.e. moving a word to the previous line if it fits.
+
+Do run `fmt` (and the preceding `scripts/verify_length.awk`) immediately before committing, but sanity-check its output.
