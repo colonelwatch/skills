@@ -17,7 +17,10 @@ These are guidelines for writing commit messages.
 
 Use CommonMark Markdown instead of GitHub Flavored Markdown (GFM), and in particular do the following.
 
-- Use backticks (e.g. `var`) for any code symbols, unless it obviously is distinct not the code symbol version or is by its stylized name (e.g. Cppcheck vs `cppcheck`).
+- Use backticks (e.g. `var`) for code-related words, including but not limited to the following:
+  - literal code symbols,
+  - file paths/names, and
+  - command names, unless it is obviously not in a shell context, like if the stylized name (e.g. Cppcheck vs `cppcheck`).
 - Use `<https://...>`, i.e. angle brackets, for autolinks (links written verbatim) instead of omitting brackets, which is GFM.
 
 Also apply Markdown syntax to the subject line if it is applicable.
