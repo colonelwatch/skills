@@ -1,6 +1,7 @@
 ---
 name: commit-author
 description: User's guidelines for authoring commits. Use when authoring commits, in conjunction with another commit authoring skill if it is available.
+compatibility: Requires GNU awk (`gawk`) and `rumdl`.
 ---
 
 # Guidelines for authoring commits
