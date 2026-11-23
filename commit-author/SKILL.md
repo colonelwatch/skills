@@ -43,4 +43,4 @@ Use `rumdl fmt --silent --config line-length=72 --config MD013.reflow=true --dis
 
 Use `scripts/verify_length.awk -v subject=50 -v body=72 FILE...` (where `FILE` is the file to read or `-` to read from standard input) as the _authoritative_ verifier: it prints potential offenders as `<NL>\t<NC>\t<LINE>`. All other length checks, including agent-authored ones, are to be treated as purely informational. Prefer using standard input with heredocs.
 
-Do run the aforementioned `scripts/verify_length.awk` and then `rumdl fmt` commands on the _entire_ commit message (subject line and body) immediately before committing. If those it is not obviously safe to proceed, confirm the next steps with the user first.
+Do run the aforementioned `scripts/verify_length.awk` and then `rumdl fmt` commands on the _entire_ commit message (subject line and body) immediately before committing. If it is not obviously safe to proceed, confirm the next steps with the user first.
