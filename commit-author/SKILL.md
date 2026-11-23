@@ -39,7 +39,7 @@ The content of a Git commit's message is important for explaining motivation and
 
 For readability, the first line (the subject line) _should_ be 50 characters long, the second line _must_ be empty, and the following lines (the body) _should_ be 72 characters long. An example of something that will exceed 72 characters in the body is a long link.
 
-Use `rumdl fmt --config line-length=72 --config MD013.reflow=true --disable MD041 FILE...` (where `FILE` is the file to edit in-place or `-` to read from standard input and write to standard output) on paragraphs (separated by double `\n`) as the authoritative Markdown formatter, including word wrap. Do this sooner than reasoning about character counts. Prefer using standard input with heredocs.
+Use `rumdl fmt --silent --config line-length=72 --config MD013.reflow=true --disable MD041 FILE...`, where `FILE` is the file to edit in-place or `-` to read from standard input and write to standard output (with `--silent` suppressing diagnostics so that only the formatted message is emitted), as the authoritative Markdown formatter, including word wrap. Run it on the entire commit message, with paragraphs separated by double `\n`. Use `rumdl` sooner than reasoning about character counts. Prefer using standard input with heredocs.
 
 Use `scripts/verify_length.awk -v subject=50 -v body=72 FILE...` (where `FILE` is the file to read or `-` to read from standard input) as the _authoritative_ verifier: it prints potential offenders as `<NL>\t<NC>\t<LINE>`. All other length checks, including agent-authored ones, are to be treated as purely informational. Prefer using standard input with heredocs.
 
